@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""2a-trebuchet.py: Advent of Code Day 2: Cube Conundrum"""
+"""2a-cube.py: Advent of Code Day 2: Cube Conundrum"""
 
 __author__ = 'Mark Sun'
 

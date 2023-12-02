@@ -1,11 +1,8 @@
 #!/usr/bin/env python
-"""2a-trebuchet.py: Advent of Code Day 2: Cube Conundrum"""
+"""2b-cube.py: Advent of Code Day 2: Cube Conundrum"""
 
 __author__ = 'Mark Sun'
 
-
-# Definitions
-tot = {'red': 12, 'green': 13, 'blue': 14}
 
 # Import inputs
 inputRaw = open('../input/2a', 'r')
