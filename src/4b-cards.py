@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""4a-cards.py: Advent of Code Day 4: Scratchcards"""
+"""4b-cards.py: Advent of Code Day 4: Scratchcards"""
 
 __author__ = 'Mark Sun'
 
