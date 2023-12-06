@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""5a-seed.py: Advent of Code Day 5: If you give a seed a fertilizer"""
+"""5b-seed.py: Advent of Code Day 5: If you give a seed a fertilizer"""
 
 __author__ = 'Mark Sun'
 
