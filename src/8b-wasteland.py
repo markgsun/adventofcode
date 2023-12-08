@@ -55,11 +55,41 @@ while True:
 
 print(totals)
 
-# TODO: Refactor LCM code
-i = 1
-while True:
-    lcm = max(totals) * i
-    if all([lcm % total == 0 for total in totals]):
-        break
-    i += 1
-print(lcm)
+
+def prime_factors(n):
+    """Returns all the prime factors of a positive integer"""
+    factors = []
+    d = 2
+    while n > 1:
+        while n % d == 0:
+            factors.append(d)
+            n /= d
+        d = d + 1
+
+    return factors
+
+
+def lcm(nums):
+    prime_dict = {}
+    for num in nums:
+        factor_dict = {}
+        for factor in prime_factors(num):
+            if factor in factor_dict.keys():
+                factor_dict[factor] += 1
+            else:
+                factor_dict[factor] = 1
+
+        for factor in factor_dict.keys():
+            if factor in prime_dict.keys():
+                prime_dict[factor] = max(prime_dict.get(factor), factor_dict.get(factor))
+            else:
+                prime_dict[factor] = factor_dict.get(factor)
+
+    res = 1
+    for factor in prime_dict.keys():
+        res *= factor ** prime_dict[factor]
+
+    return res
+
+
+print(lcm(totals))
