@@ -3,11 +3,11 @@
 
 __author__ = 'Mark Sun'
 
-# Import inputs
-input_raw = open('../input/day9', 'r')
-input_list = input_raw.read().split('\n')
-unique_list = set(input_raw.read())
-input_raw.close()
+# Import utilities
+import utilities as u
+
+# Import input
+input_list = u.import_data('9')
 
 
 def get_deltas(history_in, deltas_in):
@@ -30,7 +30,6 @@ def extrapolate(deltas_in):
     result = 0
     for row in deltas_rev:
         result = row[0] - result
-        print(result)
     return result
 
 
