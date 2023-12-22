@@ -4,12 +4,10 @@
 __author__ = 'Mark Sun'
 
 # Import utilities
-import utilities as u
+from src import utilities as u
 
 # Import input
 input_list = u.import_data('15')[0].split(',')
-
-print(input_list)
 
 total = 0
 for step in input_list:

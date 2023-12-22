@@ -4,7 +4,7 @@
 __author__ = 'Mark Sun'
 
 # Import utilities
-import utilities as u
+from src import utilities as u
 
 # Import input
 input_list = [x.split(' ') for x in u.import_data('19')]
@@ -72,9 +72,7 @@ def process_rules(part, workflow_id, workflows):
 input_rules, input_parts = split_input(input_list)
 total = 0
 for input_part in input_parts:
-    print(f'part: {input_part}')
     acceptance = process_rules(input_part, 'in', input_rules)
-    print(f'final acceptance: {acceptance}')
     if acceptance == 'A':
         total += input_part['x'] + input_part['m'] + input_part['a'] + input_part['s']
 

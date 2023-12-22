@@ -5,7 +5,7 @@ __author__ = 'Mark Sun'
 
 
 # Import inputs
-inputRaw = open('../input/2a', 'r')
+inputRaw = open('../../input/day2', 'r')
 inputList = inputRaw.read().split('\n')
 inputRaw.close()
 

@@ -63,9 +63,6 @@ def get_new_rank(hand_in):
             rank = 'U'
     else:
         rank = 'U'
-        print(rank)
-        print(cards)
-        print(card_ct)
 
     hand_des = hand_in[0]
     for src_card, des_card in card_dict.items():
@@ -92,9 +89,5 @@ new_hands.sort(key=lambda x: x[0])
 for i in range(len(new_hands)):
     total += (i+1) * new_hands[i][2]
     new_hands[i] = [(i+1) * new_hands[i][2]] + new_hands[i]
-    print('hand:{}, rank:{}'.format(new_hands[i], i+1))
 
 print(total)
-
-# Attempt: 254740470 Too high
-# Attempt: 254432467 Too high

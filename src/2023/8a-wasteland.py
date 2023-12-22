@@ -9,11 +9,8 @@ input_list = input_raw.read().split('\n')
 unique_list = set(input_raw.read())
 input_raw.close()
 
-print(input_list)
-
 instructions = input_list[0]
 instr_len = len(instructions)
-print(instructions)
 
 nodes = {}
 for input_str in input_list[2:]:
@@ -22,13 +19,10 @@ for input_str in input_list[2:]:
                   input_str.split()[3].replace(')', '')]
     nodes[node_key] = node_value
 
-print(nodes)
-
 total = 0
 i = 0
 key = 'AAA'
 while True:
-    print(key)
     if key == 'ZZZ':
         break
     if instructions[i] == 'R':

@@ -23,8 +23,6 @@ for i in input_list[2:]:
                 if map_item[0] <= seeds[j] <= map_item[1]:
                     seeds[j] += map_item[2]
                     break
-        print('map:{}'.format(temp_map))
-        print('seeds:{}'.format(seeds))
         # Reset map
         temp_map = []
         continue
@@ -41,8 +39,4 @@ for j in range(len(seeds)):
             seeds[j] += map_item[2]
             break
 
-print('map:{}'.format(temp_map))
-print('seeds:{}'.format(seeds))
 print(min(seeds))
-
-# Answer: 621354867

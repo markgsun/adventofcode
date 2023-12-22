@@ -4,7 +4,7 @@
 __author__ = 'Mark Sun'
 
 # Import inputs
-input_raw = open('../input/4a', 'r')
+input_raw = open('../../input/day4', 'r')
 input_list = input_raw.read().split('\n')
 unique_list = set(input_raw.read())
 input_raw.close()
@@ -13,7 +13,6 @@ total = 0
 reps = [1]*len(input_list)
 
 for card, input_str in enumerate(input_list):
-    print(input_str)
     winning = [int(x) for x in input_str.split('|')[0].split(':')[1].split(' ') if x]
     win_dict = dict.fromkeys(winning, 0)
     number_list = [int(x) for x in input_str.split('|')[1].split(' ') if x]

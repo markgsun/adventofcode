@@ -9,11 +9,8 @@ input_list = input_raw.read().split('\n')
 unique_list = set(input_raw.read())
 input_raw.close()
 
-print(input_list)
 time = int(input_list[0].split(':')[1].replace(' ', ''))
 record = int(input_list[1].split(':')[1].replace(' ', ''))
-print('time:{}'.format(time))
-print('distance:{}'.format(record))
 
 
 def quad_solver(t, r):
@@ -28,5 +25,4 @@ if win_int[0] == win_range[0]:
 if win_int[1] == win_range[1]:
     win_int[1] -= 1
 win_count = win_int[1] - win_int[0] + 1
-print(win_int)
 print(win_count)

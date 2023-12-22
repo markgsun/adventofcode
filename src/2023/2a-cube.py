@@ -8,7 +8,7 @@ __author__ = 'Mark Sun'
 tot = {'red': 12, 'green': 13, 'blue': 14}
 
 # Import inputs
-inputRaw = open('../input/2a', 'r')
+inputRaw = open('../../input/day2', 'r')
 inputList = inputRaw.read().split('\n')
 inputRaw.close()
 
@@ -17,15 +17,12 @@ for itemStr in inputList:
     gameCheck = True
     gameID = int(itemStr.split(':')[0].split(' ')[1])
     draws = itemStr.split(':')[1].split(';')
-    print(draws)
     for draw in draws:
         balls = draw.split(',')
-        print(balls)
         for ball in balls:
             numX = int(ball.split(' ')[1])
             color = ball.split(' ')[2]
             if numX > tot[color]:
-                print('{},{}'.format(numX, color))
                 gameCheck = False
     if gameCheck:
         total += gameID

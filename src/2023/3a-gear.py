@@ -5,7 +5,7 @@ __author__ = 'Mark Sun'
 
 
 # Import inputs
-inputRaw = open('../input/3a', 'r')
+inputRaw = open('../../input/day3', 'r')
 inputList = inputRaw.read().split('\n')
 uniqueList = set(inputRaw.read())
 inputRaw.close()
@@ -16,7 +16,6 @@ jMax = len(inputArr[0]) - 1
 total = 0
 
 for i in range(len(inputArr)):
-    print(''.join(inputArr[i]))
     j = 0
     foundNum = '0'
     adj = []
@@ -33,19 +32,12 @@ for i in range(len(inputArr)):
         else:
             if len([x for x in adj if not x.isnumeric() and x != '.']) > 0:
                 total += int(foundNum)
-                print('{},{}'.format(int(foundNum), total))
 
             foundNum = '0'
             adj = []
 
     if len([x for x in adj if not x.isnumeric() and x != '.']) > 0:
         total += int(foundNum)
-        print('{},{}'.format(int(foundNum), total))
 
 
 print('Total: {}'.format(total))
-inputRaw = open('../input/3a', 'r')
-uniqueList = list(set(inputRaw.read()))
-uniqueList.sort()
-inputRaw.close()
-print(uniqueList)

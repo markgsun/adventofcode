@@ -4,7 +4,7 @@
 __author__ = 'Mark Sun'
 
 # Import utilities
-import utilities as u
+from src import utilities as u
 
 # Import input
 input_list = [x.split(' ') for x in u.import_data('19')]

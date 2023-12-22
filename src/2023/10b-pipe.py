@@ -4,7 +4,7 @@
 __author__ = 'Mark Sun'
 
 # Import utilities
-import utilities as u
+from src import utilities as u
 
 # Import input
 input_list = u.import_data('10')
@@ -29,7 +29,6 @@ for i, row in enumerate(input_grid):
         break
 
 location = s
-# vertices += [location]
 location_prev = s
 step = 0
 clean_grid[location[0]][location[1]] = input_grid[location[0]][location[1]]
@@ -144,9 +143,6 @@ while ct < 1000:
 
     ct += 1
 
-    # if clean_grid == clean_grid_temp:
-    #     break
-
 # Shrink grid
 final_grid = []
 for row in clean_grid[::2]:
@@ -159,6 +155,3 @@ for row in final_grid:
     total += sum(x == '.' for x in row)
 
 print(total)
-
-# Attempt: 863 too high
-# Attempt: 773 too high

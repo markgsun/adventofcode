@@ -45,11 +45,7 @@ input_list = input_raw.read().split('\n')
 unique_list = set(input_raw.read())
 input_raw.close()
 
-print(input_list)
-
 hands = [[x.split()[0], int(x.split()[1])] for x in input_list]
-
-print(hands)
 
 new_hands = []
 for hand in hands:
@@ -61,5 +57,4 @@ for i in range(len(new_hands)):
     total += (i+1) * new_hands[i][2]
     new_hands[i] = [(i+1) * new_hands[i][2]] + new_hands[i]
 
-print(new_hands)
 print(total)

@@ -4,7 +4,7 @@
 __author__ = 'Mark Sun'
 
 # Import inputs
-inputRaw = open('../input/3a', 'r')
+inputRaw = open('../../input/day3', 'r')
 inputList = inputRaw.read().split('\n')
 uniqueList = set(inputRaw.read())
 inputRaw.close()
@@ -18,7 +18,6 @@ numberList = []
 startInd = None
 
 for i in range(len(inputArr)):
-    print(inputArr[i])
     foundNum = '0'
     for j in range(len(inputArr[0])):
         testCd = inputArr[i][j]
@@ -51,7 +50,4 @@ for gear in gearList:
             ratio *= num
         total += ratio
 
-
-print('Gears: {}'.format(gearList))
-print('Numbers: {}'.format(numberList))
 print('Total: {}'.format(total))

@@ -11,8 +11,6 @@ input_raw.close()
 
 times = [int(x) for x in input_list[0].split()[1:]]
 records = [int(x) for x in input_list[1].split()[1:]]
-print('times:{}'.format(times))
-print('distances:{}'.format(records))
 
 
 def quad_solver(t, r):
@@ -29,8 +27,6 @@ for i in range(len(times)):
     if win_int[1] == win_range[1]:
         win_int[1] -= 1
     win_count = win_int[1] - win_int[0] + 1
-    print(win_int)
-    print(win_int[1] - win_int[0] + 1)
     product *= win_count
 
 print(product)

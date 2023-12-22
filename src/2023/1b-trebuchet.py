@@ -13,7 +13,7 @@ numDict = {'0': 0, 'zero': 0, '1': 1, 'one': 1, '2': 2, 'two': 2,   '3': 3, 'thr
            '5': 5, 'five': 5, '6': 6, 'six': 6, '7': 7, 'seven': 7, '8': 8, 'eight': 8, '9': 9, 'nine': 9}
 
 # Import inputs
-inputRaw = open('../input/1a', 'r')
+inputRaw = open('../../input/day1', 'r')
 inputList = inputRaw.read().split('\n')
 inputRaw.close()
 
@@ -36,6 +36,5 @@ for itemStr in inputList:
 
     numResult = int(firstNum+lastNum)
     total += numResult
-    print('{},{},{},{},{}'.format(itemStr, foundDict, firstNum, lastNum, numResult))
 
 print(total)

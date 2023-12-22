@@ -4,7 +4,7 @@
 __author__ = 'Mark Sun'
 
 # Import utilities
-import utilities as u
+from src import utilities as u
 
 # Import input
 input_list = u.import_data('14')
@@ -93,7 +93,6 @@ def stress_test(platform, n):
         if platform in seen:
             cycle_start = seen.index(platform)
             cycle_len = i - cycle_start
-            print('cycle detected: {} to {}'.format(cycle_start, i))
             cycles_remaining = (n-i) % cycle_len - 1
             for j in range(cycles_remaining):
                 platform = spin_cycle(platform)
