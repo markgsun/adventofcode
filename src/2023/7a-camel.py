@@ -40,7 +40,7 @@ def get_new_rank(hand_in):
 
 
 # Import inputs
-input_raw = open('../input/day7', 'r')
+input_raw = open('../../input/day7', 'r')
 input_list = input_raw.read().split('\n')
 unique_list = set(input_raw.read())
 input_raw.close()

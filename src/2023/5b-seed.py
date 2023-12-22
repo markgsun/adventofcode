@@ -4,7 +4,7 @@
 __author__ = 'Mark Sun'
 
 # Import inputs
-input_raw = open('../input/day5', 'r')
+input_raw = open('../../input/day5', 'r')
 input_list = input_raw.read().split('\n')
 unique_list = set(input_raw.read())
 input_raw.close()
