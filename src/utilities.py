@@ -1,7 +1,6 @@
-def import_data(day):
-    input_raw = open('../../input/day'+str(day), 'r')
-    input_list = input_raw.read().split('\n')
-    input_raw.close()
+def import_data(year, day):
+    with open('../../input/'+str(year)+'/day'+str(day), 'r') as input_raw:
+        input_list = input_raw.read().split('\n')
     return input_list
 
 
